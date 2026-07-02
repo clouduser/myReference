@@ -1,6 +1,7 @@
 package myProject;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -13,8 +14,16 @@ public class Test {
 		List<String> listInput = Arrays.asList("A","Ba","Csd");
 		
 		Map<String,Integer>  map = listInput.stream().collect(Collectors.toMap(Function.identity(), String::length));
-				System.out.println(""+map);
+				//System.out.println(""+map);
 
+				
+				Map<String,Integer>  demoMap = Map.of("a",1,"b",2,"c",3);
+				
+				demoMap.forEach((key,value) -> System.out.println(key +" "+ value));
+				
+				List<String>  aList = List.of("a","b","c");
+				aList.forEach(s -> System.out.println(s.toUpperCase()));
+				
 	}
 
 }
